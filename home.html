@@ -1,0 +1,103 @@
+<!-- wp:template-part {"slug":"header-small-dark","tagName":"header"} /-->
+
+<!-- wp:query {"query":{"perPage":10,"pages":0,"offset":0,"postType":"post","categoryIds":[],"tagIds":[],"order":"desc","orderBy":"date","author":"","search":"","exclude":[],"sticky":"","inherit":true},"layout":{"inherit":true},"tagName":"main"} -->
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="wp-content/themes/twentytwentytwo-child/templates/home.css">
+    <title>Document</title>
+</head>
+<body>
+<main class="wp-block-query">
+    <img src="/wp-content/themes/twentytwentytwo-child/assets/images/map.png" alt="日本地図" class="map">
+    <div class="selectArea">
+    <select name="area" id="area" onchange="selectPrefecture()">
+        <option value="">地方を選択してください</option>
+        <option value="hokkaido">北海道</option>
+        <option value="tohoku">東北</option>
+        <option value="kanto">関東</option>
+        <option value="chubu">中部</option>
+        <option value="kinki">近畿</option>
+        <option value="chugoku">中国</option>
+        <option value="kyushu">九州</option>
+    </div>
+    </select>
+
+
+
+    <ul class="prefectures" data-target="kanto">
+        <div class="layer">
+        <li class="hokkaido"><a href="/pref1/" class="prefectures_deco">北海道</a></li>
+        <li class="tohoku"><a href="/pref2/" class="prefectures_deco">青森県</a></li>
+        <li class="tohoku"><a href="/pref3/" class="prefectures_deco">岩手県</a></li>
+        <li class="tohoku"><a href="/pref4/" class="prefectures_deco">宮城県</a></li>
+        <li class="tohoku"><a href="/pref5/" class="prefectures_deco">秋田県</a></li>
+        <li class="tohoku"><a href="/pref6/" class="prefectures_deco">山形県</a></li>
+        <li class="tohoku"><a href="/pref7/" class="prefectures_deco">福島県</a></li>
+        <li class="kanto"><a href="/pref8/" class="prefectures_deco">茨城県</a></li>
+        <li class="kanto"><a href="/pref9/" class="prefectures_deco">栃木県</a></li>
+        <li class="kanto"><a href="/pref10/" class="prefectures_deco">群馬県</a></li>
+        <li class="kanto"><a href="/pref11/" class="prefectures_deco">埼玉県</a></li>
+        <li class="kanto"><a href="/pref12/" class="prefectures_deco">千葉県</a></li>
+        <li class="kanto"><a href="/pref13/" class="prefectures_deco">東京都</a></li>
+        <li class="kanto"><a href="/pref14/" class="prefectures_deco">神奈川県</a></li>
+        <li class="chubu"><a href="/pref15/" class="prefectures_deco">新潟県</a></li>
+        <li class="chubu"><a href="/pref16/" class="prefectures_deco">富山県</a></li>
+        <li class="chubu"><a href="/pref17/" class="prefectures_deco">石川県</a></li>
+        <li class="chubu"><a href="/pref18/" class="prefectures_deco">福井県</a></li>
+        <li class="chubu"><a href="/pref19/" class="prefectures_deco">山梨県</a></li>
+        <li class="chubu"><a href="/pref20/" class="prefectures_deco">長野県</a></li>
+        <li class="chubu"><a href="/pref21/" class="prefectures_deco">岐阜県</a></li>
+        <li class="chubu"><a href="/pref22/" class="prefectures_deco">静岡県</a></li>
+        <li class="kinki"><a href="/pref23/" class="prefectures_deco">愛知県</a></li>
+        <li class="kinki"><a href="/pref24/" class="prefectures_deco">三重県</a></li>
+        <li class="kinki"><a href="/pref25/" class="prefectures_deco">滋賀県</a></li>
+        <li class="kinki"><a href="/pref26/" class="prefectures_deco">京都府</a></li>
+        <li class="kinki"><a href="/pref27/" class="prefectures_deco">大阪府</a></li>
+        <li class="kinki"><a href="/pref28/" class="prefectures_deco">兵庫県</a></li>
+        <li class="kinki"><a href="/pref29/" class="prefectures_deco">奈良県</a></li>
+        <li class="kinki"><a href="/pref30/" class="prefectures_deco">和歌山県</a></li>
+        <li class="chugoku"><a href="/pref31/" class="prefectures_deco">鳥取県</a></li>
+        <li class="chugoku"><a href="/pref32/" class="prefectures_deco">島根県</a></li>
+        <li class="chugoku"><a href="/pref33/" class="prefectures_deco">岡山県</a></li>
+        <li class="chugoku"><a href="/pref34/" class="prefectures_deco">広島県</a></li>
+        <li class="chugoku"><a href="/pref35/" class="prefectures_deco">山口県</a></li>
+        <li class="chugoku"><a href="/pref36/" class="prefectures_deco">徳島県</a></li>
+        <li class="chugoku"><a href="/pref37/" class="prefectures_deco">香川県</a></li>
+        <li class="chugoku"><a href="/pref38/" class="prefectures_deco">愛媛県</a></li>
+        <li class="chugoku"><a href="/pref39/" class="prefectures_deco">高知県</a></li>
+        <li class="kyushu"><a href="/pref40/" class="prefectures_deco">福岡県</a></li>
+        <li class="kyushu"><a href="/pref41/" class="prefectures_deco">佐賀県</a></li>
+        <li class="kyushu"><a href="/pref42/" class="prefectures_deco">長崎県</a></li>
+        <li class="kyushu"><a href="/pref43/" class="prefectures_deco">熊本県</a></li>
+        <li class="kyushu"><a href="/pref44/" class="prefectures_deco">大分県</a></li>
+        <li class="kyushu"><a href="/pref45/" class="prefectures_deco">宮崎県</a></li>
+        <li class="kyushu"><a href="/pref46/" class="prefectures_deco">鹿児島県</a></li>
+        <li class="kyushu"><a href="/pref47/" class="prefectures_deco">沖縄県</a></li>
+        </div>
+    </ul>
+
+
+
+</main>
+</body>
+</html>
+
+<script>
+        function selectPrefecture(){
+            const area = document.querySelector("#area");
+            const index = area.selectedIndex;
+            const selectedArea = area.options[index].value;
+            const prefectures = document.querySelector("ul.prefectures");
+            prefectures.dataset.target = selectedArea;
+        }
+</script>
+
+
+<!-- /wp:query -->
+
+<!-- wp:template-part {"slug":"footer","tagName":"footer"} /-->
